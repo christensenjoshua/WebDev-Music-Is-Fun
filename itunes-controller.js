@@ -14,10 +14,10 @@ function ItunesController() {
           <img class="img-fluid" src="${item.albumArt}">
         </div>
         <div class="col-7">
-          <audio id="audio${i}">
+          <audio id="audio-${i}">
             <source src="${item.preview}" type="audio/mp4">
           </audio>
-          <h5 onclick="app.controllers.itunesCtrl.playTrack('${i}')"><span id="track${i}">****</span>${item.title}</h5>
+          <h5 onclick="app.controllers.itunesCtrl.playTrack('${i}')"><span id="track-${i}">PlayIt</span>${item.title}</h5>
           <h6>Album: ${item.collection}</h6>
           <h6>By: ${item.artist}</h6>
         </div>
@@ -31,18 +31,23 @@ function ItunesController() {
   }
   //PUBLIC
   this.playTrack = function (id) {
-    let elem = document.getElementById('audio' + id)
-    let imgElem = document.getElementById('track' + id)
+    let elem = document.getElementById('audio-' + id)
+    let spanElem = document.getElementById('track-' + id)
     if (!elem.paused) {
       elem.pause()
+      spanElem.innerHTML = 'PlayIt'
       //draw pause button since it's playing
     } else {
       let audios = document.getElementsByTagName('audio')
       for (let i = 0, len = audios.length; i < len; i++) {
         audios[i].pause()
+        let num = audios[i].id.split('-')[1]
+        let aSpanElem = document.getElementById('track-' + num)
+        aSpanElem.innerHTML = 'PlayIt'
         // also draw each span as play since they should all be paused?
       }
       elem.play()
+      spanElem.innerHTML = 'PauseIt'
       //draw play button since it's paused.
     }
   }
