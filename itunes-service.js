@@ -33,7 +33,7 @@ function ItunesService() {
           preview: song.previewUrl,
         }
       })
-      return songList, artist;
+      return songList;
     })
   }
 }
