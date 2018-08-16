@@ -2,9 +2,10 @@ function ItunesController() {
 
   // PRIVATE
   const itunesService = new ItunesService()
-  function drawSongs(results) {
+  function drawSongs(results, artist) {
     //YOUR CODING STARTS HERE
     let template = ``
+    template = `<h3>Showing ${results.length} results for <em>${artist}</em></h3>`
     for (let i = 0; i < results.length; i++) {
       const item = results[i]
       template += `
@@ -58,7 +59,7 @@ function ItunesController() {
     //changes the button to loading while songs load
     $('#get-music-button').text('LOADING....');
     itunesService.getMusicByArtist(artist).then(results => {
-      drawSongs(results)
+      drawSongs(results, artist)
       //changes button back to GET MUSIC once songs are loaded
       $('#get-music-button').text('GET MUSIC');
     })
