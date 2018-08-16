@@ -8,7 +8,7 @@ function ItunesController() {
     for (let i = 0; i < results.length; i++) {
       const item = results[i]
       template += `
-      <div class="row list-row-${i%2}">
+      <div class="row shadow-lg list-row-${i%2}">
         <div class="col-2">
           <img class="img-fluid" src="${item.albumArt}">
         </div>
