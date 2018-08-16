@@ -1,5 +1,10 @@
-.responsive-audio{
-    display:block;
-    width:100%;
-    max-width:100%;
+.list-row-0{
+    background-color:rgb(255,255,245);
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+}
+.list-row-1{
+    background-color:rgb(245, 245, 255);
+    padding-top:.5rem;
+    padding-bottom:.5rem;
 }

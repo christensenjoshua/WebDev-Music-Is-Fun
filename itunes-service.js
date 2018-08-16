@@ -1,7 +1,7 @@
 function ItunesService() {
   this.getMusicByArtist = function (artist) {
     let url1 = '//bcw-getter.herokuapp.com/?url='
-    let url = 'https://itunes.apple.com/search?term=' + artist
+    let url = 'https://itunes.apple.com/search?term=' + artist + '&media=music'
     //Casts each object to 
     return $.getJSON(url).then(function (response) {
       let songList = response.results.map(song => {
