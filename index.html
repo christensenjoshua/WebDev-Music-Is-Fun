@@ -15,22 +15,26 @@
 <body>
     <div class="container-fluid">
         <div class="jumbotron app-jumbotron">
-            <h1 class="display-4">Musis Is Fun!</h1>
+            <h1 class="display-4">Musis Is Fun! <span id="header-img"></span></h1>
             <p class="lead">And so is searching for it...</p>
         
-        <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+        <form class="form-inline" autocomplete="off" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
             <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
             <div class="input-group mb-3">
                 <label class="sr-only" for="artist">Input Artist:</label>
-                <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                <input type="text" class="form-control shadow" name="artist" placeholder="Artist Name" />
                 <div class="input-group-append">
-                    <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                    <button type="submit" class="btn btn-primary shadow border border-dark" id="get-music-button">Get Music</button>
                 </div>
             </div>
         </form>
     </div>
         <div id="songs">
-
+            <div class="row text-center">
+                <div class="col">
+                <img class="img-fluid" src="https://thumbs.gfycat.com/ThreadbareZanyCow-small.gif" />
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -27,6 +27,7 @@ function ItunesController() {
       `
     }
     document.getElementById('songs').innerHTML = template
+    document.getElementById('header-img').innerHTML = '<img class="img-fluid small" src="https://thumbs.gfycat.com/ThreadbareZanyCow-small.gif" />'
   }
   //PUBLIC
   this.playTrack = function (id) {

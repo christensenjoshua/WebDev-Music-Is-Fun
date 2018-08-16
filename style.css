@@ -24,3 +24,6 @@ body{
 .app-jumbotron{
     background-color:rgb(245, 245, 255);
 }
+.img-fluid.small{
+    max-height:50px;
+}
