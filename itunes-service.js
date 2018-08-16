@@ -20,7 +20,7 @@ function ItunesService() {
   
   //DO NOT MODIFY
   this.getMusicByArtist = function (artist) {
-    var url = 'https://itunes.apple.com/search?term=' + artist + "&media=music&callback=?"
+    let url = 'https://itunes.apple.com/search?term=' + artist + "&media=music&callback=?"
     //Casts each object to 
     return $.getJSON(url).then(function (response) {
       let songList = response.results.map(song => {
@@ -33,7 +33,7 @@ function ItunesService() {
           preview: song.previewUrl,
         }
       })
-      return songList;
+      return songList, artist;
     })
   }
 }
