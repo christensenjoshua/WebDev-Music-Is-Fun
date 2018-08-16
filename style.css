@@ -27,7 +27,7 @@ body{
 .img-fluid.small{
     max-height:50px;
 }
-@media screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
     #header-img{
         display:none;
     }
